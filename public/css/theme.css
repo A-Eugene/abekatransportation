@@ -1,0 +1,13 @@
+.theme-button {
+  background-color: #f15a25 !important;
+  color: black !important;
+  border: none !important;
+  transition: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: 0.2s;
+}
+
+.theme-button:hover {
+  color: white !important;
+}
