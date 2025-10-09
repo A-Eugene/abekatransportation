@@ -11,7 +11,7 @@
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="#link1" class="text-decoration-none text-muted">Link 1</a></li>
                     <li class="mb-2"><a href="#link2" class="text-decoration-none text-muted">Link 2</a></li>
-                    <li class="mb-2"><a href="#link3" class="text-decoration-none text-muted">Link 3</a></li>
+                    <li class="mb-2"><a href="{{ route('company')}}" class="text-decoration-none text-muted">Company Profile</a></li>
                 </ul>
             </div>
 
