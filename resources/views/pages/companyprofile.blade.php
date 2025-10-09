@@ -159,7 +159,7 @@
                 <p class="text-muted mb-3">
                     ABIKA Transportation berdedikasi untuk menyediakan layanan pengiriman yang tidak hanya cepat tetapi juga terjangkau bagi seluruh pelanggan. 
                     Komitmen kami tercermin langsung dalam kepuasan pelanggan seperti Mr. Bayu, yang menyatakan, "ABIKA Transportation adalah jasa pengiriman yang cepat dan harganya juga murah.
-                    Senang sekali bisa pakai jasa pengiriman di sini."
+                    Senang sekali bisa pakai jasa pengiriman di sini.
                 </p>
 
                 <p class="text-muted mb-4">
