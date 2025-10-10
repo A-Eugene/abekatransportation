@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="py-5 bg-light">
+<section class="truck-background py-5 bg-light">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
@@ -14,11 +14,11 @@
                 <p class="lead text-muted">Abeka Transportation - Sejak 1994</p>
             </div>
 
-            <div class="col-lg-6 text-end position-relative">
+            {{-- <div class="col-lg-6 text-end position-relative">
                 <div style="width: 150px; height: 150px; background-color: #f15a25; border-radius: 50%; opacity: 0.2; position: absolute; top: -50px; right: 50px;"></div>
                 <div style="width: 100px; height: 100px; background-color: #f15a25; border-radius: 50%; opacity: 0.3; position: absolute; top: 60px; right: 0;"></div>
                 <div style="width: 80px; height: 80px; background-color: #f15a25; border-radius: 50%; opacity: 0.2; position: absolute; top: 40px; right: 180px;"></div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -188,3 +188,4 @@
 </section>
 
 @endsection
+
