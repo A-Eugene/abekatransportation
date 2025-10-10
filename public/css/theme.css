@@ -11,3 +11,7 @@
 .theme-button:hover {
   color: white !important;
 }
+
+button.theme-button {
+  background-color: #f15a25 !important;
+}
