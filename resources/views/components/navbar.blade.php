@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-white border-bottom">
+{{-- <nav class="navbar navbar-expand-sm bg-white border-bottom">
   <div class="container-fluid d-flex flex-column align-items-center">
 
     <div class="w-100 d-flex justify-content-start mb-2">
@@ -21,4 +21,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> --}}
