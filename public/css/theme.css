@@ -5,13 +5,14 @@
   transition: none !important;
   text-decoration: none !important;
   box-shadow: none !important;
-  transition: 0.2s;
+  transition: 0.3s ease;
 }
 
 .theme-button:hover {
   color: white !important;
 }
 
-button.theme-button {
-  background-color: #f15a25 !important;
+.section-vert-p {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }

@@ -8,8 +8,8 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h1 class="display-3 fw-bold mb-3">COMPANY</h1>
-                <h1 class="display-3 fw-bold" style="color: #f15a25;">PROFILE</h1>
+                <h1 class="display-3 fw-bold mb-3">Profil</h1>
+                <h1 class="display-3 fw-bold" style="color: #f15a25;">Perusahaan</h1>
                 <div style="width: 100px; height: 4px; background-color: #f15a25;" class="my-4"></div>
                 <p class="lead text-muted">Abeka Transportation - Sejak 1994</p>
             </div>
@@ -24,7 +24,7 @@
     </div>
 </section>
 
-<section class="py-5 my-5">
+<section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 mb-4 mb-lg-0">
@@ -32,7 +32,7 @@
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
 
                 <p class="text-muted mb-3">
-                    ABIKA Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
+                    ABEKA Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
                     Kami memahami bahwa dalam dunia bisnis yang serba cepat, setiap pengiriman adalah janji, dan kami berkomitmen untuk memenuhi janji tersebut dengan integritas penuh.
                 </p>
 
@@ -51,7 +51,7 @@
     </div>
 </section>
 
-<section class="py-5 my-5 bg-light">
+<section class="section-vert-p bg-light">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
@@ -85,7 +85,7 @@
     </div>
 </section>
 
-<section class="py-5 my-5">
+{{-- <section class="section-vert-p">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-6">
@@ -144,15 +144,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
-<section class="py-5 my-5 bg-light">
+<section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="{{ asset('images/comp1_profile.jpg') }}" alt="Company Photo 3" class="img-fluid rounded shadow-lg">
-            </div>
-
             <div class="col-lg-6">
                 <h2 class="display-5 fw-bold mb-4">LAYANAN<br><span style="color: #f15a25;">TERBAIK</span></h2>
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
@@ -169,22 +165,16 @@
                 </p>
                 <a href="#contact" class="btn theme-button">Hubungi Kami</a>
             </div>
+
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ asset('images/comp1_profile.jpg') }}" alt="Company Photo 3" class="img-fluid rounded shadow-lg">
+            </div>
         </div>
     </div>
 </section>
 
-<section class="py-5 my-5">
-    <div class="container text-center">
-        <h2 class="display-5 fw-bold mb-4">SIAP UNTUK<br><span style="color: #f15a25;">BEKERJA SAMA?</span></h2>
-        <div style="width: 100px; height: 3px; background-color: #f15a25; margin: 0 auto;" class="mb-4"></div>
-        <p class="text-muted mb-4 col-lg-6 mx-auto">
-            Hubungi kami sekarang untuk mendapatkan penawaran terbaik untuk kebutuhan pengiriman Anda.
-        </p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="mailto:aj_care@yahoo.com" class="btn theme-button">Email Kami</a>
-            <a href="tel:085223641947" class="btn btn-outline-dark">Telepon Sekarang</a>
-        </div>
-    </div>
-</section>
+<div class="container-fluid bg-light">
+    @include('components.contact-section')
+</div>
 
 @endsection
