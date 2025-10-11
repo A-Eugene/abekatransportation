@@ -18,26 +18,26 @@
 
 <section class="section-vert-p bg-light">
     <div class="container">
-        <x-landing.section-heading 
+        <x-landing.section-heading-and-container 
             heading_1="DAFTAR" 
             heading_2="LAYANAN" 
         >
             <p class="text-muted">Kami menawarkan berbagai layanan pengiriman yang dirancang untuk memenuhi kebutuhan logistik Anda. Dari pengiriman reguler hingga layanan khusus, kami siap membantu Anda mengirimkan barang dengan aman dan tepat waktu.</p>
-        </x-landing.section-heading>
+        </x-landing.section-heading-and-container>
         <x-landing.beranda.card-grid grid_id="layanan" :list="$layanans"  />
     </div>
 </section>
 
 <section class="section-vert-p">
     <div class="container">
-        <x-landing.section-heading 
+        <x-landing.section-heading-and-container 
             heading_1="Mengapa" 
             heading_2="Memilih Kami" 
         >
             <p>
                 Kami percaya bahwa layanan pengiriman terbaik harus didukung oleh kualitas, kecepatan, dan kepercayaan. Berikut adalah empat alasan utama mengapa ABEKA Transportation adalah mitra logistik yang tepat untuk Anda :
             </p>
-        </x-landing.section-heading>
+        </x-landing.section-heading-and-container>
         
         <div class="row g-4">
             <x-landing.beranda.mengapa-col
@@ -66,14 +66,14 @@
 
 <section class="section-vert-p bg-light">
     <div class="container">
-        <x-landing.section-heading 
+        <x-landing.section-heading-and-container 
             heading_1="Jangkauan" 
             heading_2="Layanan" 
         >
             <p class="text-muted">
                 Dengan jaringan yang luas dan tim operasional yang profesional, kami siap melayani pengiriman Anda ke berbagai wilayah dengan efisiensi dan keandalan tinggi.
             </p>
-        </x-landing.section-heading>
+        </x-landing.section-heading-and-container>
         <x-landing.beranda.card-grid grid_id="jangkauan" :list="$jangkauans"  />
     </div>
 </section>

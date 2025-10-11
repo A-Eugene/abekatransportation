@@ -41,7 +41,7 @@
                     Dengan area operasional yang meliputi Surabaya, Tulungagung, dan Kediri, kami memastikan barang Anda sampai tujuan dengan aman dan tepat waktu.
                 </p>
             </div> --}}
-            <x-landing.section-heading 
+            <x-landing.section-heading-and-container 
                 heading_1="TENTANG" 
                 heading_2="KAMI"
                 :use_default_row="false"
@@ -55,7 +55,7 @@
                     Kami bangga memiliki tim yang berdedikasi dan berpengalaman, siap melayani berbagai kebutuhan logistik Anda, mulai dari pengiriman paket kecil hingga muatan besar. 
                     Dengan area operasional yang meliputi Surabaya, Tulungagung, dan Kediri, kami memastikan barang Anda sampai tujuan dengan aman dan tepat waktu.
                 </p>
-            </x-landing.section-heading>
+            </x-landing.section-heading-and-container>
 
             <div class="col-lg-6">
                 <div class="position-relative">
@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <x-landing.section-heading 
+            <x-landing.section-heading-and-container 
                 heading_1="VISI &" 
                 heading_2="MISI"
                 :use_default_row="false"
@@ -102,7 +102,7 @@
                     <li class="mb-2">Jangkauan : Memperkuat jaringan di Surabaya, Tulungagung, dan Kediri</li>
                     <li class="mb-2">Integritas : Memastikan pengiriman barang tiba dalam kondisi utuh dan tepat waktu</li>
                 </ul>
-            </x-landing.section-heading>
+            </x-landing.section-heading-and-container>
         </div>
     </div>
 </section>
@@ -115,7 +115,7 @@
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
 
             </div> --}}
-            <x-landing.section-heading heading_1="LAYANAN" heading_2="TERBAIK" :use_default_row="false">
+            <x-landing.section-heading-and-container heading_1="LAYANAN" heading_2="TERBAIK" :use_default_row="false">
                 <p class="text-muted mb-3">
                     Abeka Transportation berdedikasi untuk menyediakan layanan pengiriman yang tidak hanya cepat tetapi juga terjangkau bagi seluruh pelanggan. 
                     Komitmen kami tercermin langsung dalam kepuasan pelanggan seperti Mr. Bayu, yang menyatakan, "Abeka Transportation adalah jasa pengiriman yang cepat dan harganya juga murah.
@@ -128,7 +128,7 @@
                     kami siap membantu pengiriman barang Anda dengan profesionalisme tinggi.
                 </p>
                 <a href="#contact" class="btn theme-button">Hubungi Kami</a>
-            </x-landing.section-heading>
+            </x-landing.section-heading-and-container>
 
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <img src="{{ asset('images/comp1_profile.jpg') }}" alt="Company Photo 3" class="img-fluid rounded shadow-lg">
