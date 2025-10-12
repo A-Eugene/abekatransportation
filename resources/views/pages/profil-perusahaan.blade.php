@@ -27,12 +27,12 @@
 <section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 mb-4 mb-lg-0">
+            {{-- <div class="col-lg-5 mb-4 mb-lg-0">
                 <h2 class="display-5 fw-bold mb-4">TENTANG<br><span style="color: #f15a25;">KAMI</span></h2>
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
 
                 <p class="text-muted mb-3">
-                    ABEKA Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
+                    Abeka Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
                     Kami memahami bahwa dalam dunia bisnis yang serba cepat, setiap pengiriman adalah janji, dan kami berkomitmen untuk memenuhi janji tersebut dengan integritas penuh.
                 </p>
 
@@ -40,9 +40,24 @@
                     Kami bangga memiliki tim yang berdedikasi dan berpengalaman, siap melayani berbagai kebutuhan logistik Anda, mulai dari pengiriman paket kecil hingga muatan besar. 
                     Dengan area operasional yang meliputi Surabaya, Tulungagung, dan Kediri, kami memastikan barang Anda sampai tujuan dengan aman dan tepat waktu.
                 </p>
-            </div>
+            </div> --}}
+            <x-landing.section-heading-and-container 
+                heading_1="TENTANG" 
+                heading_2="KAMI"
+                :use_default_row="false"
+            >
+                <p class="text-muted mb-3">
+                    Abeka Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
+                    Kami memahami bahwa dalam dunia bisnis yang serba cepat, setiap pengiriman adalah janji, dan kami berkomitmen untuk memenuhi janji tersebut dengan integritas penuh.
+                </p>
 
-            <div class="col-lg-7">
+                <p class="text-muted mb-3">
+                    Kami bangga memiliki tim yang berdedikasi dan berpengalaman, siap melayani berbagai kebutuhan logistik Anda, mulai dari pengiriman paket kecil hingga muatan besar. 
+                    Dengan area operasional yang meliputi Surabaya, Tulungagung, dan Kediri, kami memastikan barang Anda sampai tujuan dengan aman dan tepat waktu.
+                </p>
+            </x-landing.section-heading-and-container>
+
+            <div class="col-lg-6">
                 <div class="position-relative">
                     <img src="{{ asset('images/comp3_profile.jpg') }}" alt="Company Photo 1" class="img-fluid rounded shadow-lg">
                 </div>
@@ -54,10 +69,24 @@
 <section class="section-vert-p bg-light">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+            {{-- <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
                 <h2 class="display-5 fw-bold mb-4">VISI &<br><span style="color: #f15a25;">MISI</span></h2>
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
                 
+
+            </div> --}}
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <div style="width: 100px; height: 100px; background-color: #f15a25; border-radius: 50%; position: absolute; top: -45px; left: -45px; opacity: 0.2; z-index: 0;"></div>
+                    <img src="{{ asset('images/comp2_profile.jpeg') }}" alt="Company Photo 2" class="img-fluid rounded shadow-lg position-relative" style="z-index: 1;">
+                </div>
+            </div>
+
+            <x-landing.section-heading-and-container 
+                heading_1="VISI &" 
+                heading_2="MISI"
+                :use_default_row="false"
+            >
                 <h5 class="fw-bold mb-3">VISI</h5>
                 <p class="text-muted mb-4">
                     Visi kami adalah menjadi perusahaan jasa pengiriman dan logistik terdepan dan terpercaya yang diakui secara luas atas keunggulan operasional dan
@@ -73,88 +102,23 @@
                     <li class="mb-2">Jangkauan : Memperkuat jaringan di Surabaya, Tulungagung, dan Kediri</li>
                     <li class="mb-2">Integritas : Memastikan pengiriman barang tiba dalam kondisi utuh dan tepat waktu</li>
                 </ul>
-            </div>
-
-            <div class="col-lg-6 order-lg-1">
-                <div class="position-relative">
-                    <div style="width: 100px; height: 100px; background-color: #f15a25; border-radius: 50%; position: absolute; top: -45px; left: -45px; opacity: 0.2; z-index: 0;"></div>
-                    <img src="{{ asset('images/comp2_profile.jpeg') }}" alt="Company Photo 2" class="img-fluid rounded shadow-lg position-relative" style="z-index: 1;">
-                </div>
-            </div>
+            </x-landing.section-heading-and-container>
         </div>
     </div>
 </section>
 
-{{-- <section class="section-vert-p">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4">MENGAPA<br><span style="color: #f15a25;">MEMILIH KAMI</span></h2>
-                <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
-                <p class="text-muted">
-                    Kami percaya bahwa layanan pengiriman terbaik harus didukung oleh kualitas, kecepatan, dan kepercayaan.
-                    Berikut adalah empat alasan utama mengapa ABIKA Transportation adalah mitra logistik yang tepat untuk Anda :
-                </p>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="p-4 h-100">
-                    <h1 style="color: #f15a25; font-size: 3rem;" class="fw-bold mb-3">01</h1>
-                    <h5 class="fw-bold mb-3">Efisiensi Biaya dan Waktu Maksimal</h5>
-                    <p class="text-muted mb-0">
-                        Kami menjamin layanan pengiriman yang cepat tanpa mengorbankan dompet Anda dan kami berkomitmen untuk memberikan solusi logistik
-                        yang hemat biaya dengan tetap menjaga standar ketepatan waktu yang tinggi
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="p-4 h-100">
-                    <h1 style="color: #f15a25; font-size: 3rem;" class="fw-bold mb-3">02</h1>
-                    <h5 class="fw-bold mb-3">Kekuatan Tim Operasional yang Profesional</h5>
-                    <p class="text-muted mb-0">
-                        Di balik setiap pengiriman sukses adalah tim kami yang solid, terlatih, dan berdedikasi tinggi. 
-                        Setiap anggota tim bekerja secara profesional untuk memastikan barang Anda ditangani dengan hati-hati dan keahlian terbaik.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="p-4 h-100">
-                    <h1 style="color: #f15a25; font-size: 3rem;" class="fw-bold mb-3">03</h1>
-                    <h5 class="fw-bold mb-3">Jaringan Luas dan Keandalan Regional</h5>
-                    <p class="text-muted mb-0">
-                        Kami telah membangun fokus operasional yang kuat di berbagai wilayah strategis, menawarkan jangkauan yang
-                        luas dan keandalan yang telah teruji di daerah tersebut.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="p-4 h-100">
-                    <h1 style="color: #f15a25; font-size: 3rem;" class="fw-bold mb-3">04</h1>
-                    <h5 class="fw-bold mb-3">Komitmen Penuh terhadap Keamanan</h5>
-                    <p class="text-muted mb-0">
-                        Kami menempatkan keamanan barang Anda sebagai prioritas utama dan kami sangat menjamin setiap paket diangkut dengan
-                        integritas penuh dan tiba di tujuan dalam kondisi utuh dan sesuai jadwal yang telah disepakati.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-
 <section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            {{-- <div class="col-lg-6">
                 <h2 class="display-5 fw-bold mb-4">LAYANAN<br><span style="color: #f15a25;">TERBAIK</span></h2>
                 <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
+
+            </div> --}}
+            <x-landing.section-heading-and-container heading_1="LAYANAN" heading_2="TERBAIK" :use_default_row="false">
                 <p class="text-muted mb-3">
-                    ABIKA Transportation berdedikasi untuk menyediakan layanan pengiriman yang tidak hanya cepat tetapi juga terjangkau bagi seluruh pelanggan. 
-                    Komitmen kami tercermin langsung dalam kepuasan pelanggan seperti Mr. Bayu, yang menyatakan, "ABIKA Transportation adalah jasa pengiriman yang cepat dan harganya juga murah.
+                    Abeka Transportation berdedikasi untuk menyediakan layanan pengiriman yang tidak hanya cepat tetapi juga terjangkau bagi seluruh pelanggan. 
+                    Komitmen kami tercermin langsung dalam kepuasan pelanggan seperti Mr. Bayu, yang menyatakan, "Abeka Transportation adalah jasa pengiriman yang cepat dan harganya juga murah.
                     Senang sekali bisa pakai jasa pengiriman di sini.
                 </p>
 
@@ -164,7 +128,7 @@
                     kami siap membantu pengiriman barang Anda dengan profesionalisme tinggi.
                 </p>
                 <a href="#contact" class="btn theme-button">Hubungi Kami</a>
-            </div>
+            </x-landing.section-heading-and-container>
 
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <img src="{{ asset('images/comp1_profile.jpg') }}" alt="Company Photo 3" class="img-fluid rounded shadow-lg">
@@ -174,7 +138,7 @@
 </section>
 
 <div class="container-fluid bg-light">
-    @include('components.contact-section')
+    <x-landing.contact-section />
 </div>
 
 @endsection

@@ -22,9 +22,11 @@
                     <p class="mb-2"><a href="mailto:aj_care@yahoo.com" class="text-decoration-none text-body-secondary">aj_care@yahoo.com</a></p>
                 </div>
                 <p class="mb-2 small"><strong>Telepon:</strong></p>
-                <p class="mb-1 small text-body-secondary">☎️ 0852-2364-1947 (Surabaya)</p>
-                <p class="mb-1 small text-body-secondary">☎️ 0851-0079-8845 (Tulungagung)</p>
-                <p class="mb-1 small text-body-secondary">☎️ 0823-4809-0700 (Kediri)</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="tel:085223641947" class="text-decoration-none text-body-secondary">☎️ 0852-2364-1947 (Surabaya)</a></li>
+                    <li class="mb-2"><a href="tel:085100798845" class="text-decoration-none text-body-secondary">☎️ 0851-0079-8845 (Tulungagung)</a></li>
+                    <li class="mb-2"><a href="tel:082348090700" class="text-decoration-none text-body-secondary">☎️ 0823-4809-0700 (Kediri)</a></li>
+                </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">

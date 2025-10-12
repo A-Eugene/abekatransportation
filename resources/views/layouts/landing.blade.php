@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    @include('components.navbar')
+    <x-landing.navbar />
     @yield('content')
-    @include('components.footer')
+    <x-landing.footer />
 </body>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 </html>
