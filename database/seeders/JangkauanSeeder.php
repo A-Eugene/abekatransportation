@@ -37,7 +37,7 @@ class JangkauanSeeder extends Seeder
             'image' => 'tulungagung.jpg'
         ]);
 
-        // Jangkauan::factory()->count(100)->create();
+        //Jangkauan::factory()->count(100)->create();
     }
 }
 

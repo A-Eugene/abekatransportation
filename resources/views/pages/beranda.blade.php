@@ -99,8 +99,8 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">{{ $jangkauan->lokasi }}</h5>
-                            <p class="card-text text-muted mb-1">{{ $jangkauan->alamat }}</p>
-                            <p class="card-text text-muted">{{ $jangkauan->telepon }}</p>
+                            <p class="card-text mb-1">{{ $jangkauan->alamat }}</p>
+                            <p class="card-text">{{ $jangkauan->telepon }}</p>
                         </div>
                     </div>
                 </div>
