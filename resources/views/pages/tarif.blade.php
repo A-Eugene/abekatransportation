@@ -15,7 +15,7 @@
     </div>
 
    <div class="container">
-        <div class="table-responsive">
+        <div class="table-responsive mb-4">
             <table class="table table-light">
                 <thead>
                     <th scope="col">Layanan</th>
@@ -28,26 +28,35 @@
                 </thead>
                 <tbody>
                     @foreach($layanans as $layanan)
-                        <div class="container">
-                            <tr>
-                                <td>{{ $layanan->judul }}</td>
-                                <td>Rp {{ $layanan->harga_per_km }}</td>
-                                <td>Rp {{ $layanan->harga_per_kg }}</td>
-                                <td>Rp {{ $layanan->biaya_minimum }}</td>
-                                <td>{{ $layanan->berat_maks_kg }} kg</td>
-                                <td>{{ $layanan->volume_maks_m3 }} m<sup>3</sup></td>
-                                <td>{{ $layanan->berat_volumetrik_ratio }}</td>
-                            </tr>
-                        </div>  
+                        <tr class="{{ $loop->iteration >= 11 ? 'collapse table-collapse' : '' }}">
+                            <td>{{ $layanan->judul }}</td>
+                            <td>Rp {{ number_format($layanan->harga_per_km, 0, ',', '.') }}</td>
+                            <td>Rp {{ number_format($layanan->harga_per_kg, 0, ',', '.') }}</td>
+                            <td>Rp {{ number_format($layanan->biaya_minimum, 0, ',', '.') }}</td>
+                            <td>{{ $layanan->berat_maks_kg }} kg</td>
+                            <td>{{ $layanan->volume_maks_m3 }} m<sup>3</sup></td>
+                            <td>{{ $layanan->berat_volumetrik_ratio }}</td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
     </div>
+    <div class="container text-center">
+        <button class="btn theme-button" data-bs-toggle="collapse" data-bs-target=".table-collapse">
+            Lihat Semuanya
+        </button>
+    </div>
 </section>
-{{-- 
-<section class="section-vert-p">
- 
-</section> --}}
 
 @endsection
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('.theme-button[data-bs-toggle="collapse"]');
+
+        button.addEventListener('click', () => {
+            button.style.display = 'none';
+        });
+    });
+</script>
