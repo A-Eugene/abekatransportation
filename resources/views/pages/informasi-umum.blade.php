@@ -14,11 +14,7 @@
                 Panduan mengenai syarat pengiriman, batasan berat dan volume, perhitungan biaya, serta kebijakan layanan disediakan untuk memastikan proses pengiriman berjalan lancar dan aman.
             </p>
         </x-landing.section-heading-and-container>
-    </div>
-</section>
 
-<section class="section-vert-p">
-    <div class="container">
         <div class="row">
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="sidebar-nav position-sticky" style="top: calc(76px + 0.025 * (100vh - 76px));">
@@ -58,6 +54,12 @@
         </div>
     </div>
 </section>
+
+{{-- <section class="section-vert-p">
+    <div class="container">
+
+    </div>
+</section> --}}
 
 @endsection
 

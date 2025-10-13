@@ -53,18 +53,4 @@ class LandingController extends Controller
             'allKategori' => $allKategori
         ]);
     }
-
-
-
-    // public function informasiPerusahaan() {
-    //     return view('pages.informasi-perusahaan');
-    // }
-
-    // public function informasiPaket() {
-    //     return view('pages.informasi-paket');
-    // }
-
-    // public function informasiSyaratKetentuan() {
-    //     return view('pages.informasi-syarat-ketentuan');
-    // }
 }
