@@ -10,6 +10,8 @@ class Jangkauan extends Model
     /** @use HasFactory<\Database\Factories\JangkauanFactory> */
     use HasFactory;
 
+    protected $table = "jangkauan";
+
     protected $fillable = [
         'lokasi',
         'alamat',

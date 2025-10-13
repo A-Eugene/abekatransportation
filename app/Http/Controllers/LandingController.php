@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InformasiUmum;
 use App\Models\Jangkauan;
+use App\Models\KategoriInformasiUmum;
 use App\Models\Layanan;
 
 class LandingController extends Controller
 {
     public function beranda() {
         return view('pages.beranda', [
-            'jangkauans' => Jangkauan::all()->map(function ($j) {
+            'jangkauan' => Jangkauan::all()->map(function ($j) {
                 return (object) [
                     'title' => $j->lokasi,
                     'text_1' => $j->alamat,
@@ -17,7 +19,7 @@ class LandingController extends Controller
                     'image' => $j->image,
                 ];
             }),
-            'layanans' => Layanan::all()->map(function ($j) {
+            'layanan' => Layanan::all()->map(function ($j) {
                 return (object) [
                     'title' => $j->judul,
                     'text_1' => $j->deskripsi,
@@ -29,7 +31,7 @@ class LandingController extends Controller
 
     public function tarif() {
         return view('pages.tarif', [
-            'layanans' => Layanan::all()
+            'layanan' => Layanan::all()
         ]);
     }
 
@@ -37,15 +39,32 @@ class LandingController extends Controller
         return view('pages.profil-perusahaan');
     }
 
-    public function informasiPerusahaan() {
-        return view('pages.informasi-perusahaan');
+    public function informasiUmum($kategori = '')
+    {
+        $kategoriModel = $kategori === ''
+            ? KategoriInformasiUmum::with('informasiUmum')->first()
+            : KategoriInformasiUmum::with('informasiUmum')->where('kategori', $kategori)->firstOrFail();
+
+        $allKategori = KategoriInformasiUmum::with('informasiUmum')->get();
+
+        return view('pages.informasi-umum', [
+            'kategoriCurrent' => $kategoriModel->kategori,
+            'informasiCurrent' => $kategoriModel->informasiUmum,
+            'allKategori' => $allKategori
+        ]);
     }
 
-    public function informasiPaket() {
-        return view('pages.informasi-paket');
-    }
 
-    public function informasiSyaratKetentuan() {
-        return view('pages.informasi-syarat-ketentuan');
-    }
+
+    // public function informasiPerusahaan() {
+    //     return view('pages.informasi-perusahaan');
+    // }
+
+    // public function informasiPaket() {
+    //     return view('pages.informasi-paket');
+    // }
+
+    // public function informasiSyaratKetentuan() {
+    //     return view('pages.informasi-syarat-ketentuan');
+    // }
 }

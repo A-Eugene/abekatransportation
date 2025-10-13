@@ -9,9 +9,5 @@ Route::get('/tarif', [LandingController::class, 'tarif']);
 
 Route::get('/profil-perusahaan', [LandingController::class, 'profilPerusahaan']);
 
-Route::get('/informasi', [LandingController::class, 'informasiPerusahaan']);
-
-Route::get('/informasi-paket', [LandingController::class, 'informasiPaket']);
-
-Route::get('/informasi-syaratketentuan', [LandingController::class, 'informasiSyaratKetentuan']);
+Route::get('/informasi-umum/{kategori?}', [LandingController::class, 'informasiUmum'])->name('informasiUmum');
 

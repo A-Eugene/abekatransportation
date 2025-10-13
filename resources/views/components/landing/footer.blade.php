@@ -11,8 +11,8 @@
                 <ul class="list-unstyled">
                     <li class="mb-2"><a href="/" class="text-decoration-none text-body-secondary">Beranda</a></li>
                     <li class="mb-2"><a href="/tarif" class="text-decoration-none text-body-secondary">Tarif</a></li>
-                    <li class="mb-2"><a href="/informasi" class="text-decoration-none text-body-secondary">Informasi</a></li>
-                    <li class="mb-2"><a href="/profil-perusahaan" class="text-decoration-none text-body-secondary">Company Profile</a></li>
+                    <li class="mb-2"><a href="/informasi-umum" class="text-decoration-none text-body-secondary">Informasi Umum</a></li>
+                    <li class="mb-2"><a href="/profil-perusahaan" class="text-decoration-none text-body-secondary">Profil Perusahaan</a></li>
                 </ul>
             </div>
 
@@ -31,9 +31,14 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="mb-3">Follow Us</h5>
-                <a href="https://www.instagram.com/abekatransportation/" target="_blank" class="text-light" style="font-size: 1.5rem;">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                <div class="d-flex gap-3">
+                    <a href="https://www.instagram.com/abekatransportation/" target="_blank" class="text-light" style="font-size: 1.5rem;">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@AbekaTransportation" target="_blank" class="text-light" style="font-size: 1.5rem;">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
             </div>
         </div>
 

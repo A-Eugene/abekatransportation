@@ -27,15 +27,15 @@
                     <th scope="col">Rasio Berat Volumetrik</th>
                 </thead>
                 <tbody>
-                    @foreach($layanans as $layanan)
+                    @foreach($layanan as $layanan)
                         <tr class="{{ $loop->iteration >= 11 ? 'collapse table-collapse' : '' }}">
-                            <td>{{ $layanan->judul }}</td>
-                            <td>Rp {{ number_format($layanan->harga_per_km, 0, ',', '.') }}</td>
-                            <td>Rp {{ number_format($layanan->harga_per_kg, 0, ',', '.') }}</td>
-                            <td>Rp {{ number_format($layanan->biaya_minimum, 0, ',', '.') }}</td>
-                            <td>{{ $layanan->berat_maks_kg }} kg</td>
-                            <td>{{ $layanan->volume_maks_m3 }} m<sup>3</sup></td>
-                            <td>{{ $layanan->berat_volumetrik_ratio }}</td>
+                            <td class="text-muted">{{ $layanan->judul }}</td>
+                            <td class="text-muted">Rp {{ number_format($layanan->harga_per_km, 0, ',', '.') }}</td>
+                            <td class="text-muted">Rp {{ number_format($layanan->harga_per_kg, 0, ',', '.') }}</td>
+                            <td class="text-muted">Rp {{ number_format($layanan->biaya_minimum, 0, ',', '.') }}</td>
+                            <td class="text-muted">{{ $layanan->berat_maks_kg }} kg</td>
+                            <td class="text-muted">{{ $layanan->volume_maks_m3 }} m<sup>3</sup></td>
+                            <td class="text-muted">{{ $layanan->berat_volumetrik_ratio }}</td>
                         </tr>
                     @endforeach
                 </tbody>

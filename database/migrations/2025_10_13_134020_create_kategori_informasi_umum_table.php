@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jangkauans', function (Blueprint $table) {
+        Schema::create('kategori_informasi_umum', function (Blueprint $table) {
             $table->id();
-            $table->string('lokasi');
-            $table->text('alamat');
-            $table->string('telepon');
-            $table->string('image');
+            $table->string('kategori')->unique();
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jangkauans');
+        Schema::dropIfExists('kategori_informasi_umum');
     }
 };

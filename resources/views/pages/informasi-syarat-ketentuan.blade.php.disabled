@@ -23,7 +23,7 @@
                 </ul>
                 
                 <h4 class="fw-bold text-dark mt-4 mb-3">Kembali ke Pusat Bantuan</h4>
-                <a href="{{ routes('informasi') }}" class="btn btn-outline-dark w-100">Kembali ke FAQ</a>
+                <a href="{{ route('informasi-perusahaan') }}" class="btn btn-outline-dark w-100">Kembali ke FAQ</a>
             </div>
         </div>
 

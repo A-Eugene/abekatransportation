@@ -17,7 +17,7 @@
                     <a class="nav-link" href="/tarif">Tarif</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/informasi">Informasi</a>
+                    <a class="nav-link" href="/informasi-umum">Informasi Umum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/profil-perusahaan">Profil Perusahaan</a>

@@ -24,7 +24,7 @@
         >
             <p class="text-muted">Kami menawarkan berbagai layanan pengiriman yang dirancang untuk memenuhi kebutuhan logistik Anda. Dari pengiriman reguler hingga layanan khusus, kami siap membantu Anda mengirimkan barang dengan aman dan tepat waktu.</p>
         </x-landing.section-heading-and-container>
-        <x-landing.beranda.card-grid grid_id="layanan" :list="$layanans"  />
+        <x-landing.beranda.card-grid grid_id="layanan" :list="$layanan"  />
     </div>
 </section>
 
@@ -74,7 +74,7 @@
                 Dengan jaringan yang luas dan tim operasional yang profesional, kami siap melayani pengiriman Anda ke berbagai wilayah dengan efisiensi dan keandalan tinggi.
             </p>
         </x-landing.section-heading-and-container>
-        <x-landing.beranda.card-grid grid_id="jangkauan" :list="$jangkauans"  />
+        <x-landing.beranda.card-grid grid_id="jangkauan" :list="$jangkauan"  />
     </div>
 </section>
 

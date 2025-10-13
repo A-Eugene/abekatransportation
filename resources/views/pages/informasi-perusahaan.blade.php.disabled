@@ -30,9 +30,9 @@
                         Pilih Sub-Kategori
                     </button>
                     <ul class="dropdown-menu w-100">
-                        <li><a class="dropdown-item" href="{{ routes('informasi-packet', ['section' => 'panduan']) }}">Panduan Pengiriman</a></li>
-                        <li><a class="dropdown-item" href="{{ routes('informasi-packet', ['section' => 'berbahaya']) }}">Barang Berbahaya</a></li>
-                        <li><a class="dropdown-item" href="{{ routes('informasi-packet', ['section' => 'larangan']) }}">Larangan Pengiriman</a></li>
+                        <li><a class="dropdown-item" href="{{ route('informasi-paket', ['section' => 'panduan']) }}">Panduan Pengiriman</a></li>
+                        <li><a class="dropdown-item" href="{{ route('informasi-paket', ['section' => 'berbahaya']) }}">Barang Berbahaya</a></li>
+                        <li><a class="dropdown-item" href="{{ route('informasi-paket', ['section' => 'larangan']) }}">Larangan Pengiriman</a></li>
                     </ul>
                 </div>
 
@@ -42,8 +42,8 @@
                         Pilih Ketentuan
                     </button>
                     <ul class="dropdown-menu w-100">
-                        <li><a class="dropdown-item" href="{{ routes('syarat-ketentuan') }}">Syarat & Ketentuan Umum</a></li>
-                        <li><a class="dropdown-item" href="{{ routes('syarat-ketentuan', ['section' => 'privasi']) }}">Kebijakan Privasi</a></li>
+                        <li><a class="dropdown-item" href="{{ route('syarat-ketentuan') }}">Syarat & Ketentuan Umum</a></li>
+                        <li><a class="dropdown-item" href="{{ route('syarat-ketentuan', ['section' => 'privasi']) }}">Kebijakan Privasi</a></li>
                     </ul>
                 </div>
             </div>

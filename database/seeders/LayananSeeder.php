@@ -55,4 +55,4 @@ class LayananSeeder extends Seeder
     }
 }
 
-# php artisan db:seed --class=LayananSeeder
+# php artisan db:seed --class=layananeeder
