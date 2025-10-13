@@ -13,7 +13,7 @@ class Jangkauan extends Model
     protected $table = "jangkauan";
 
     protected $fillable = [
-        'lokasi',
+        'lokas  i',
         'alamat',
         'telepon',
         'image',

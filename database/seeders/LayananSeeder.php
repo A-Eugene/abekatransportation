@@ -51,7 +51,7 @@ class LayananSeeder extends Seeder
             'berat_volumetrik_ratio' => 4000,
         ]);
 
-        Layanan::factory()->count(100)->create();
+        //Layanan::factory()->count(100)->create();
     }
 }
 
