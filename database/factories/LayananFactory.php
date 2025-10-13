@@ -24,6 +24,12 @@ class LayananFactory extends Factory
                 'carter.jpg',
                 'dokumen.jpg',
             ]),
+            'harga_per_km' => $this->faker->randomFloat(2, 5000, 10000),
+            'harga_per_kg' => $this->faker->randomFloat(2, 500, 3000),
+            'biaya_minimum' => $this->faker->randomFloat(2, 15000, 100000),
+            'berat_maks_kg' => $this->faker->randomFloat(2, 50, 3000),
+            'volume_maks_m3' => $this->faker->randomFloat(3, 0.1, 10),
+            'berat_volumetrik_ratio' => $this->faker->randomElement([4000, 5000, 6000])
         ];
     }
 }

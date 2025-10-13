@@ -13,7 +13,13 @@ class Layanan extends Model
     protected $fillable = [
         'judul',
         'deskripsi',
-        'image'
+        'image',
+        'harga_per_km',
+        'harga_per_kg',
+        'biaya_minimum',
+        'berat_maks_kg',
+        'volume_maks_m3',
+        'berat_volumetrik_ratio',
     ];
 
     public $timestamps = false;

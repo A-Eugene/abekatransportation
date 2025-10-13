@@ -1,7 +1,7 @@
 <section class="section-vert-p">
     <x-landing.section-heading-and-container 
         heading_1="Siap untuk" 
-        heading_2="Bekerja Sama" 
+        heading_2="Bekerja Sama?" 
         center="true"
     >
         <p class="text-muted mb-4 col-lg-6 mx-auto">

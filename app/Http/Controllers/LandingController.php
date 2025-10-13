@@ -27,6 +27,12 @@ class LandingController extends Controller
         ]);
     }
 
+    public function tarif() {
+        return view('pages.tarif', [
+            'layanans' => Layanan::all()
+        ]);
+    }
+
     public function profilPerusahaan() {
         return view('pages.profil-perusahaan');
     }

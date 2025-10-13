@@ -16,6 +16,12 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi');
             $table->string('image');
+            $table->decimal('harga_per_km', 10, 2);
+            $table->decimal('harga_per_kg', 10, 2);
+            $table->decimal('biaya_minimum', 10, 2);
+            $table->decimal('berat_maks_kg', 8, 2)->default(1000);
+            $table->decimal('volume_maks_m3', 8, 3)->default(5.000);
+            $table->decimal('berat_volumetrik_ratio', 8, 2)->default(4000);
         });
     }
 

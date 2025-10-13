@@ -4,9 +4,16 @@
 
 @section('content')
 
-<section class="truck-background py-5 bg-light">
-    <div class="container py-5">
-        <div class="row align-items-center">
+<section class="section-vert-p bg-light">
+    <div class="container">
+        <x-landing.section-heading-and-container
+            heading_1="Profil"
+            heading_2="Perusahaan"
+        >
+            <p class="lead text-muted">Abeka Transportation - Sejak 1994</p>
+        </x-landing.section-heading-and-container>
+
+        {{-- <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h1 class="display-3 fw-bold mb-3">Profil</h1>
                 <h1 class="display-3 fw-bold" style="color: #f15a25;">Perusahaan</h1>
@@ -20,7 +27,7 @@
                 <div style="width: 80px; height: 80px; background-color: #f15a25; border-radius: 50%; opacity: 0.2; position: absolute; top: 40px; right: 180px;"></div>
             </div> --}}
 
-        </div>
+        {{-- </div> --}}
     </div>
 </section>
 
@@ -75,7 +82,7 @@
                 
 
             </div> --}}
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="position-relative">
                     <div style="width: 100px; height: 100px; background-color: #f15a25; border-radius: 50%; position: absolute; top: -45px; left: -45px; opacity: 0.2; z-index: 0;"></div>
                     <img src="{{ asset('images/comp2_profile.jpeg') }}" alt="Company Photo 2" class="img-fluid rounded shadow-lg position-relative" style="z-index: 1;">
@@ -110,11 +117,6 @@
 <section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
-            {{-- <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4">LAYANAN<br><span style="color: #f15a25;">TERBAIK</span></h2>
-                <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
-
-            </div> --}}
             <x-landing.section-heading-and-container heading_1="LAYANAN" heading_2="TERBAIK" :use_default_row="false">
                 <p class="text-muted mb-3">
                     Abeka Transportation berdedikasi untuk menyediakan layanan pengiriman yang tidak hanya cepat tetapi juga terjangkau bagi seluruh pelanggan. 
