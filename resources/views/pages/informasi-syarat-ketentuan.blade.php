@@ -1,0 +1,77 @@
+@extends('layouts.landing')
+
+@section('title', 'Syarat & Ketentuan - Abeka Transportation')
+
+@section('content')
+
+<div class="container-fluid hero-informasi mb-5">
+    <div class="container">
+        <h1 class="text-white fw-bold display-5">Syarat & Ketentuan</h1>
+        <p class="lead text-white-50 mt-2">Ketentuan Umum dan Kebijakan Privasi Perusahaan</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-lg-3">
+            <div class="sidebar-nav position-sticky" style="top: 20px;">
+                <h4 class="fw-bold text-dark mb-3">Ketentuan Layanan</h4>
+                <ul class="list-unstyled mb-4">
+                    <li><a href="#syarat-umum" class="nav-link-info {{ request('section', 'umum') != 'privasi' ? 'active' : '' }}">• Syarat & Ketentuan Umum</a></li>
+                    <li><a href="#kebijakan-privasi" class="nav-link-info {{ request('section') == 'privasi' ? 'active' : '' }}">• Kebijakan Privasi</a></li>
+                </ul>
+                
+                <h4 class="fw-bold text-dark mt-4 mb-3">Kembali ke Pusat Bantuan</h4>
+                <a href="{{ routes('informasi') }}" class="btn btn-outline-dark w-100">Kembali ke FAQ</a>
+            </div>
+        </div>
+
+        <div class="col-lg-9 ps-lg-5">
+            
+            <h2 id="syarat-umum" class="fw-bold mb-4 pt-4">Syarat & Ketentuan Umum</h2>
+            <div class="content-block mb-5">
+                <p class="text-muted">**Penerimaan Ketentuan:** Dengan menggunakan layanan pengiriman Abeka Transportation, pelanggan dianggap telah membaca, memahami, dan menyetujui semua syarat dan ketentuan yang ditetapkan di sini. Kami berhak menolak atau menunda pengiriman yang tidak mematuhi peraturan.</p>
+                <p class="text-muted">**Tanggung Jawab:** Batas tanggung jawab perusahaan untuk kerugian atau kerusakan barang adalah sebesar sepuluh kali (10x) biaya kirim atau nilai barang (mana yang lebih rendah), kecuali jika barang tersebut diasuransikan penuh.</p>
+            </div>
+            
+            <h2 id="kebijakan-privasi" class="fw-bold mb-4 pt-4">Kebijakan Privasi</h2>
+            <div class="content-block mb-5">
+                <p class="text-muted">Abeka Transportation berkomitmen untuk melindungi data pribadi pelanggan. Informasi seperti nama, alamat, dan kontak hanya digunakan untuk tujuan pemrosesan pengiriman dan tidak akan dibagikan kepada pihak ketiga tanpa persetujuan Anda, kecuali diwajibkan oleh hukum.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light">
+    <x-landing.contact-section />
+</div>
+
+
+@endsection
+
+<style>
+    .hero-informasi {
+        background-color: #f15a25; 
+        padding: 50px 0;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+    }
+    .nav-link-info {
+        color: #333; 
+        padding: 5px 0;
+        display: block;
+        transition: color 0.2s;
+        padding-left: 10px; 
+        text-decoration: none; 
+    }
+    .nav-link-info:hover, .nav-link-info.active {
+        color: #f15a25 !important;
+        font-weight: bold;
+    }
+    .col-lg-9 h2 {
+        padding-top: 70px !important;
+        margin-top: -70px !important;
+    }
+</style>
