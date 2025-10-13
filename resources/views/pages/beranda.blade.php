@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<section class="section-vert-p bg-light">
+<section class="section-vert-p bg-light" id="layanan">
     <div class="container">
         <x-landing.section-heading-and-container 
             heading_1="DAFTAR" 
