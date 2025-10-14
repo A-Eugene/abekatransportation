@@ -21,9 +21,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 d-none d-lg-block">
-                <div class="sidebar-nav position-sticky" style="top: 76px;">
+                <div class="sidebar-nav position-sticky" style="top: calc(76px + 0.025 * (100vh - 76px));">
                     <div class="d-flex gap-0">
-                        <div class="flex-1 overflow-y-auto" style="max-height: calc(95vh - 76px); padding-right: 40px;">
+                        <div class="flex-1 overflow-y-auto" style="max-height: calc(0.95 * (100vh - 76px)); padding-right: 40px;">
                             <x-landing.informasi-umum.informasi-links :allKategori="$allKategori" gap="5" /> 
                         </div>
                     </div>        
@@ -79,5 +79,9 @@
 
     .infoisi {
         text-align: justify;
+    }
+
+    li::marker {
+        color: var(--bs-secondary-color)
     }
 </style>

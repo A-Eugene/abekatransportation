@@ -34,20 +34,6 @@
 <section class="section-vert-p">
     <div class="container">
         <div class="row align-items-center">
-            {{-- <div class="col-lg-5 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold mb-4">TENTANG<br><span style="color: #f15a25;">KAMI</span></h2>
-                <div style="width: 80px; height: 3px; background-color: #f15a25;" class="mb-4"></div>
-
-                <p class="text-muted mb-3">
-                    Abeka Transportation hadir sebagai solusi logistik Anda, didirikan dengan satu tujuan utama: menyediakan layanan pengiriman barang yang Cepat, Handal, dan Terpercaya.
-                    Kami memahami bahwa dalam dunia bisnis yang serba cepat, setiap pengiriman adalah janji, dan kami berkomitmen untuk memenuhi janji tersebut dengan integritas penuh.
-                </p>
-
-                <p class="text-muted mb-3">
-                    Kami bangga memiliki tim yang berdedikasi dan berpengalaman, siap melayani berbagai kebutuhan logistik Anda, mulai dari pengiriman paket kecil hingga muatan besar. 
-                    Dengan area operasional yang meliputi Surabaya, Tulungagung, dan Kediri, kami memastikan barang Anda sampai tujuan dengan aman dan tepat waktu.
-                </p>
-            </div> --}}
             <x-landing.section-heading-and-container 
                 heading_1="TENTANG" 
                 heading_2="KAMI"
