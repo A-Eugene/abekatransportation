@@ -6,6 +6,7 @@ use App\Models\InformasiUmum;
 use App\Models\Jangkauan;
 use App\Models\KategoriInformasiUmum;
 use App\Models\Layanan;
+use Pest\Mutate\Mutators\Sets\ReturnSet;
 
 class LandingController extends Controller
 {
@@ -52,5 +53,9 @@ class LandingController extends Controller
             'informasiCurrent' => $kategoriModel->informasiUmum,
             'allKategori' => $allKategori
         ]);
+    }
+
+    public function loginPerusahaan() {
+        return view('pages.login-perusahaan');
     }
 }
