@@ -44,7 +44,7 @@
 </div>
 
 <div class="container-fluid bg-light">
-    <x-landing.contact-section />
+    <x-contact-section />
 </div>
 
 

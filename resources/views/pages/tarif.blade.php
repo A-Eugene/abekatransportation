@@ -6,12 +6,12 @@
 
 <section class="section-vert-p bg-light">
     <div class="container">
-        <x-landing.section-heading-and-container
+        <x-section-heading-and-container
             heading_1="Tarif"
             heading_2="Layanan"
         >
             <p class="lead text-muted">Kami menghadirkan harga yang kompetitif dan adil untuk setiap kilometer perjalanan barang Anda.</p>
-        </x-landing.section-heading-and-container>
+        </x-section-heading-and-container>
     </div>
 
    <div class="container">

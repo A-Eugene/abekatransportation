@@ -18,44 +18,44 @@
 
 <section class="section-vert-p bg-light" id="layanan">
     <div class="container">
-        <x-landing.section-heading-and-container 
+        <x-section-heading-and-container 
             heading_1="DAFTAR" 
             heading_2="LAYANAN" 
         >
             <p class="text-muted">Kami menawarkan berbagai layanan pengiriman yang dirancang untuk memenuhi kebutuhan logistik Anda. Dari pengiriman reguler hingga layanan khusus, kami siap membantu Anda mengirimkan barang dengan aman dan tepat waktu.</p>
-        </x-landing.section-heading-and-container>
-        <x-landing.beranda.card-grid grid_id="layanan" :list="$layanan"  />
+        </x-section-heading-and-container>
+        <x-card-grid grid_id="layanan" :list="$layanan"  />
     </div>
 </section>
 
 <section class="section-vert-p">
     <div class="container">
-        <x-landing.section-heading-and-container 
+        <x-section-heading-and-container 
             heading_1="Mengapa" 
             heading_2="Memilih Kami" 
         >
             <p>
                 Kami percaya bahwa layanan pengiriman terbaik harus didukung oleh kualitas, kecepatan, dan kepercayaan. Berikut adalah empat alasan utama mengapa ABEKA Transportation adalah mitra logistik yang tepat untuk Anda :
             </p>
-        </x-landing.section-heading-and-container>
+        </x-landiherdng.section-heading-and-container>
         
         <div class="row g-4">
-            <x-landing.beranda.mengapa-col
+            <x-mengapa-col
                 number="1"
                 title="Efisiensi Biaya dan Waktu Maksimal"
                 body="Kami menjamin layanan pengiriman yang cepat tanpa mengorbankan dompet Anda dan kami berkomitmen untuk memberikan solusi logistik yang hemat biaya dengan tetap menjaga standar ketepatan waktu yang tinggi."
             />
-            <x-landing.beranda.mengapa-col 
+            <x-mengapa-col 
                 number="2"
                 title="Kekuatan Tim Operasional yang Profesional"
                 body="Di balik setiap pengiriman sukses adalah tim kami yang solid, terlatih, dan berdedikasi tinggi. Setiap anggota tim bekerja secara profesional untuk memastikan barang Anda ditangani dengan hati-hati dan keahlian terbaik."
             />
-            <x-landing.beranda.mengapa-col 
+            <x-mengapa-col 
                 number="3"
                 title="Jaringan Luas dan Keandalan Regional"
                 body="Kami telah membangun fokus operasional yang kuat di berbagai wilayah strategis, menawarkan jangkauan yang luas dan keandalan yang telah teruji di daerah tersebut."
             />
-            <x-landing.beranda.mengapa-col 
+            <x-mengapa-col 
                 number="4"
                 title="Komitmen Penuh terhadap Keamanan"
                 body="Kami menempatkan keamanan barang Anda sebagai prioritas utama dan kami sangat menjamin setiap paket diangkut dengan integritas penuh dan tiba di tujuan dalam kondisi utuh dan sesuai jadwal yang telah disepakati."
@@ -66,20 +66,20 @@
 
 <section class="section-vert-p bg-light">
     <div class="container">
-        <x-landing.section-heading-and-container 
+        <x-section-heading-and-container 
             heading_1="Jangkauan" 
             heading_2="Layanan" 
         >
             <p class="text-muted">
                 Dengan jaringan yang luas dan tim operasional yang profesional, kami siap melayani pengiriman Anda ke berbagai wilayah dengan efisiensi dan keandalan tinggi.
             </p>
-        </x-landing.section-heading-and-container>
-        <x-landing.beranda.card-grid grid_id="jangkauan" :list="$jangkauan"  />
+        </x-section-heading-and-container>
+        <x-card-grid grid_id="jangkauan" :list="$jangkauan"  />
     </div>
 </section>
 
 <div class="container-fluid">
-    <x-landing.contact-section />
+    <x-contact-section />
 </div>
 
 @endsection
