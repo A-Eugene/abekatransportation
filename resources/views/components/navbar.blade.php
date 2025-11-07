@@ -23,12 +23,11 @@
                     <a class="nav-link" href="/profil-perusahaan">Profil Perusahaan</a>
                 </li>
             </ul>
-            <button type="button" class="btn theme-button d-md-none mt-2">Login</button>
         </div>
-
-        <button type="button" class="btn theme-button ms-auto d-none d-md-block">Login</button>
+        <button type="button" class="btn theme-button ms-auto d-none d-md-block"  href="/login-perusahaan">Login</button>
     </div>
 </nav>
+
 
 <style>
     body {

@@ -13,3 +13,5 @@ Route::get('/profil-perusahaan', [InformasiUmumController::class, 'profilPerusah
 
 Route::get('/informasi-umum/{kategori?}', [InformasiUmumController::class, 'informasiUmum']);
 
+Route::get('/login-perusahaan', [LandingController::class, 'loginPerusahaan']);
+
