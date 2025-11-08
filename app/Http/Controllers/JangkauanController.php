@@ -10,7 +10,7 @@ use App\Models\Layanan;
 class JangkauanController extends Controller
 {
     public function beranda() {
-        return view('pages.beranda', [
+        return view('pages.landing.beranda', [
             'jangkauan' => Jangkauan::all()->map(function ($j) {
                 return (object) [
                     'title' => $j->lokasi,

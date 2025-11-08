@@ -9,7 +9,7 @@
     <div class="login-wrapper">
         <div class="container flex justify-center align-items-center">
             <div class="login-card mx-auto">
-                @error('email')
+                @error('username')
                     <div class="alert alert-danger" role="alert">
                         {{  $message }}
                     </div>
@@ -17,15 +17,17 @@
 
                 {{-- <h2 class="login-title">Login ke Akun Anda</h2> --}}
                 <div class="mb-3">
-                    <label for="email" class="form-label">Alamat Email</label>
-                    <input type="email" class="form-control" id="email" name="email"
-                        placeholder="Masukkan email Anda" value="{{ old('email') }}" required>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Masukkan username Anda"
+                        value="{{ old('username') }}"
+                        pattern="[A-Za-z0-9_]{3,20}"
+                        title="Only letters, numbers, and underscores (3-20 chars)">
                 </div>
 
                 <div class="mb-3">
                     <label for="password" class="form-label">Kata Sandi</label>
                     <input type="password" class="form-control" id="password" name="password"
-                        placeholder="Masukkan kata sandi" required>
+                        placeholder="Masukkan kata sandi Anda" required>
                 </div>
 
                 <button type="submit" class="btn btn-orange w-100 mt-3">Masuk</button>

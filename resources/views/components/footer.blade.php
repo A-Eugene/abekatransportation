@@ -9,10 +9,10 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="mb-3">Navigation</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="/" class="text-decoration-none text-body-secondary">Beranda</a></li>
-                    <li class="mb-2"><a href="/tarif" class="text-decoration-none text-body-secondary">Tarif</a></li>
-                    <li class="mb-2"><a href="/informasi-umum" class="text-decoration-none text-body-secondary">Informasi Umum</a></li>
-                    <li class="mb-2"><a href="/profil-perusahaan" class="text-decoration-none text-body-secondary">Profil Perusahaan</a></li>
+                    <li class="mb-2"><a href="{{  route('beranda') }}" class="text-decoration-none text-body-secondary">Beranda</a></li>
+                    <li class="mb-2"><a href="{{ route('tarif') }}" class="text-decoration-none text-body-secondary">Tarif</a></li>
+                    <li class="mb-2"><a href="{{ route('informasi-umum') }}" class="text-decoration-none text-body-secondary">Informasi Umum</a></li>
+                    <li class="mb-2"><a href="{{ route('profil-perusahaan') }}" class="text-decoration-none text-body-secondary">Profil Perusahaan</a></li>
                 </ul>
             </div>
 

@@ -1,6 +1,10 @@
+@props([
+    'showLogin' => true
+])
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow">
     <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="/">
+        <a class="navbar-brand me-auto" href="{{  route('beranda') }}">
             <img src="{{ asset('images/logo-trans-white.png') }}" alt="Logo navbar Abeka" class="d-inline-block align-text-top">
         </a>
 
@@ -11,34 +15,24 @@
         <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Beranda</a>
+                    <a class="nav-link" href="{{  route('beranda') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/tarif">Tarif</a>
+                    <a class="nav-link" href="{{ route('tarif') }}">Tarif</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/informasi-umum">Informasi Umum</a>
+                    <a class="nav-link" href="{{ route('informasi-umum') }}">Informasi Umum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/profil-perusahaan">Profil Perusahaan</a>
+                    <a class="nav-link" href="{{ route('profil-perusahaan') }}">Profil Perusahaan</a>
                 </li>
             </ul>
         </div>
-        <a href="/login" class="text-decoration-none text-white">
-            <button class="btn theme-button ms-auto d-none d-md-block" >
-                Login
-            </button>
-        </a>
     </div>
 </nav>
 
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
+<style>    
     .navbar {
         padding: 0.5rem 1rem;
     }

@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             KategoriInformasiUmumSeeder::class,
             InformasiUmumSeeder::class,
             JangkauanSeeder::class,
-            LayananSeeder::class
+            LayananSeeder::class,
+            UserSeeder::class
         ]);
     }
 }

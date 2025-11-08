@@ -1,13 +1,13 @@
 
 <div class="informasi-links flex-1 overflow-y-auto" style="max-height: calc(0.95 * (100vh - 76px)); padding-right: 40px;">
     @foreach($allKategori as $kategori_info)
-        <a href="/informasi-umum/{{ $kategori_info->kategori }}" class="nav-link mb-3">
+        <a href="{{ route('informasi-umum', ['kategori' => $kategori_info->kategori]) }}" class="nav-link mb-3">
             <h4 class="fw-bold text-dark mb-2 informasi-link" id="{{ $kategori_info->kategori }}">{{ $kategori_info->kategori }}</h4>
         </a>
         <ul class="mb-{{ $gap }}">
             @foreach($kategori_info->informasiUmum as $info)
                 <li>
-                    <a href="/informasi-umum/{{ $kategori_info->kategori }}#{{ Str::slug($info->judul) }}" class="informasi-link text-muted">
+                    <a href="{{ route('informasi-umum', ['kategori' => $kategori_info->kategori]) }}#{{ Str::slug($info->judul) }}" class="informasi-link text-muted">
                         {{ $info->judul }}
                     </a>
                 </li>

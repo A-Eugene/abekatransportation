@@ -7,31 +7,30 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    // Login
     public function loginPage(Request $request) {
         if (Auth::check()) {
-            return redirect('/');
+            return redirect(route('dashboard'));
         }
 
-        return view('pages.login');
+        return view('pages.landing.login');
     }
 
     public function loginHandler(Request $request) {
         $request->validate([
-            'email' => 'required|string',
+            'username' => 'required|string',
             'password' => 'required|string',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('username', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Regenerate session to prevent session fixation
             $request->session()->regenerate();
-
-            return redirect()->intended('/dashboard');
+            return redirect()->intended(route('dashboard'));
         }
 
         return back()->withErrors([
-            'email' => 'Email atau password salah.'
+            'username' => 'Username atau password salah.'
         ])->withInput();
     }
 
@@ -42,7 +41,12 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect(route('login'));
+    }
+
+    // Dashboard
+    public function userDashboardPage($model = '') {
+        return view('pages.dashboard.dashboard-user');
     }
 
 }

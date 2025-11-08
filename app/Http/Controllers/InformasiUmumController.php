@@ -9,7 +9,7 @@ use App\Models\KategoriInformasiUmum;
 class InformasiUmumController extends Controller
 {
     public function profilPerusahaan() {
-        return view('pages.profil-perusahaan');
+        return view('pages.landing.profil-perusahaan');
     }
 
     public function informasiUmum($kategori = '')
@@ -20,7 +20,7 @@ class InformasiUmumController extends Controller
 
         $allKategori = KategoriInformasiUmum::with('informasiUmum')->get();
 
-        return view('pages.informasi-umum', [
+        return view('pages.landing.informasi-umum', [
             'kategoriModel' => $kategoriModel,
             'allKategori' => $allKategori
         ]);
