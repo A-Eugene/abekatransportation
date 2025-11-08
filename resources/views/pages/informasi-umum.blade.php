@@ -19,9 +19,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="sidebar-nav position-sticky" style="top: calc(76px + 0.025 * (100vh - 76px));">
                     <div class="d-flex gap-0">
-                        <div class="flex-1 overflow-y-auto" style="max-height: calc(0.95 * (100vh - 76px)); padding-right: 40px;">
-                            <x-informasi-links :allKategori="$allKategori" gap="5" /> 
-                        </div>
+                        <x-informasi-links :allKategori="$allKategori" gap="5" /> 
                     </div>        
                 </div>
             </div>
@@ -47,7 +45,7 @@
 
             <div class="col-lg-9 ps-lg-5">
                 @foreach($kategoriModel->informasiUmum as $info)
-                    <h3 class="fw-bold mb-4 pt-4" id="{{ Str::slug($info->judul) }}">{{ $info->judul }}</h3>
+                    <h3 class="fw-bold mb-4 pt-4" id="info-{{ Str::slug($info->judul) }}">{{ $info->judul }}</h3>
                     <p class="text-muted text-sm">Kategori: {{ $kategoriModel->kategori }}</p>
                     <p class="text-muted mb-3 infoisi">{{ $info->isi }}</p>
                 @endforeach
@@ -56,15 +54,8 @@
     </div>
 </section>
 
-{{-- <section class="section-vert-p">
-    <div class="container">
-
-    </div>
-</section> --}}
-
-{{-- Test --}}
-
 @endsection
+
 
 <style>
     .accordion-button {

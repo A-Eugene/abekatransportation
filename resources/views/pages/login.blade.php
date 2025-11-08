@@ -1,36 +1,47 @@
 @extends('layouts.landing')
 
-@section('title', 'Login Abeka Transportation')
+@section('title', 'Login - Abeka Transportation')
 
 @section('content')
-<div class="login-wrapper">
-    <div class="login-card">
-        <h2 class="login-title">Login ke Akun Anda</h2>
-            <div class="mb-3">
-                <label for="email" class="form-label">Alamat Email</label>
-                <input type="email" class="form-control" id="email" name="email"
-                    placeholder="Masukkan email Anda" required>
-            </div>
+<form method="POST" action="/login">
+    @csrf
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Kata Sandi</label>
-                <input type="password" class="form-control" id="password" name="password"
-                    placeholder="Masukkan kata sandi" required>
-            </div>
+    <div class="login-wrapper">
+        <div class="container flex justify-center align-items-center">
+            <div class="login-card mx-auto">
+                @error('email')
+                    <div class="alert alert-danger" role="alert">
+                        {{  $message }}
+                    </div>
+                @enderror
 
-            <button type="submit" class="btn btn-orange w-100 mt-3">Masuk</button>
+                {{-- <h2 class="login-title">Login ke Akun Anda</h2> --}}
+                <div class="mb-3">
+                    <label for="email" class="form-label">Alamat Email</label>
+                    <input type="email" class="form-control" id="email" name="email"
+                        placeholder="Masukkan email Anda" value="{{ old('email') }}" required>
+                </div>
 
-            <div class="text-center mt-3 login-footer">
-                <p class="text-sm text-gray-600 mb-0">Belum punya akun?
-                </p>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Kata Sandi</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Masukkan kata sandi" required>
+                </div>
+
+                <button type="submit" class="btn btn-orange w-100 mt-3">Masuk</button>
+
+                {{-- <div class="text-center mt-3 login-footer">
+                    <p class="text-sm text-gray-600 mb-0">Belum punya akun?
+                    </p>
+                </div> --}}
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</form>
 
 <style>
     .login-wrapper {
-        min-height: 100vh;
+        height: calc(100vh - 66px);
         display: flex;
         align-items: center;
         justify-content: center;

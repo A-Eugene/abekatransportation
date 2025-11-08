@@ -24,7 +24,11 @@
                 </li>
             </ul>
         </div>
-        <button type="button" class="btn theme-button ms-auto d-none d-md-block"  href="/login-perusahaan">Login</button>
+        <a href="/login" class="text-decoration-none text-white">
+            <button class="btn theme-button ms-auto d-none d-md-block" >
+                Login
+            </button>
+        </a>
     </div>
 </nav>
 
