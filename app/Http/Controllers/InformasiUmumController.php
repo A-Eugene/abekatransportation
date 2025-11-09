@@ -8,10 +8,6 @@ use App\Models\KategoriInformasiUmum;
 
 class InformasiUmumController extends Controller
 {
-    public function profilPerusahaan() {
-        return view('pages.landing.profil-perusahaan');
-    }
-
     public function informasiUmum($kategori = '')
     {
         $kategoriModel = $kategori === ''

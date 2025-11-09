@@ -87,12 +87,12 @@
                 <x-dashboard-link model="Layanan" />
             </div>
 
-            <div class="content">
+            <div class="content overflow-y-auto p-3 p-md-5">
+                @yield('content')
             </div>
         </div>
     </div>
 
-    @yield('content')
     @yield('create_modal_content')
     @yield('update_modal_content')
 </body>
