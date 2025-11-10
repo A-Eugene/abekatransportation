@@ -54,15 +54,6 @@
         </div>
     </div>
 </section>
-
-{{-- <section class="section-vert-p">
-    <div class="container">
-
-    </div>
-</section> --}}
-
-{{-- Test --}}
-
 @endsection
 
 <style>
