@@ -55,7 +55,7 @@
 @endsection
 
 @section('paginationLinksContent')
-    {{ $layanans->onEachSide(1)->links() }}
+    {{ $layanans->onEachSide(0)->links('pagination.limit-5') }}
 @endsection
 
 @section('createModalBody')

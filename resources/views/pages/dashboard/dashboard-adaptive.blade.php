@@ -126,7 +126,7 @@
                     </form>
 
                     <div class="pagination-links">
-                        {{ $data->onEachSide(1)->links() }}
+                        {{ $data->onEachSide(0)->links('pagination.limit-5') }}
                     </div>
                 </div>
             </div>

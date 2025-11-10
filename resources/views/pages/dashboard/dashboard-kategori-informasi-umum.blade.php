@@ -23,7 +23,7 @@
 @endsection
 
 @section('paginationLinksContent')
-    {{ $kategoriInformasiUmums->onEachSide(1)->links() }}
+    {{ $kategoriInformasiUmums->onEachSide(0)->links('pagination.limit-5') }}
 @endsection
 
 @section('createModalBody')

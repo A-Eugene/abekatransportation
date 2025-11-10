@@ -35,7 +35,7 @@
 @endsection
 
 @section('paginationLinksContent')
-    {{ $jangkauans->onEachSide(1)->links() }}
+    {{ $jangkauans->onEachSide(0)->links('pagination.limit-5') }}
 @endsection
 @section('createModalBody')
     <x-modal-item-small label="Lokasi">
