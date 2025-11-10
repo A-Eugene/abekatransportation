@@ -53,7 +53,10 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD:resources/views/pages/landing/informasi-umum.blade.php
 
+=======
+>>>>>>> tarifNew:resources/views/pages/informasi-umum.blade.php
 @endsection
 
 
