@@ -1,10 +1,22 @@
+@props([
+    'allKategori',
+    'currentKategori'
+])
 
-<div class="informasi-links flex-1 overflow-y-auto" style="max-height: calc(0.95 * (100vh - 76px)); padding-right: 40px;">
+
+<div class="d-flex flex-column flex-1 overflow-y-auto g-3" style="max-height: calc(0.95 * (100vh - 76px)); padding-right: 40px;">
     @foreach($allKategori as $kategori_info)
-        <a href="{{ route('informasi-umum', ['kategori' => $kategori_info->kategori]) }}" class="nav-link mb-3">
-            <h4 class="fw-bold text-dark mb-2 informasi-link" id="{{ $kategori_info->kategori }}">{{ $kategori_info->kategori }}</h4>
+        <a 
+            href="{{ route('informasi-umum', ['kategori' => $kategori_info->kategori]) }}" 
+            class="mb-3 informasi-link fw-bold text-dark"
+            style="{{ $kategori_info->kategori === $currentKategori ? 'color: #f15a25 !important' : '' }}"
+        >
+            {{ $kategori_info->kategori }} 
         </a>
-        <ul class="mb-{{ $gap }}">
+    @endforeach       
+</div>
+
+        {{-- <ul class="mb-{{ $gap }}">
             @foreach($kategori_info->informasiUmum as $info)
                 <li>
                     <a href="{{ route('informasi-umum', ['kategori' => $kategori_info->kategori]) }}#{{ Str::slug($info->judul) }}" class="informasi-link text-muted">
@@ -12,11 +24,9 @@
                     </a>
                 </li>
             @endforeach
-        </ul>
-    @endforeach       
-</div>
+        </ul> --}}
 
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         const pathname = window.location.pathname.split('/');
 
@@ -42,18 +52,22 @@
             location.reload();
         });
     });
-</script>
+</script> --}}
 
 <style>
     .informasi-link {
         font-size: 18px;
         cursor: pointer;
-        text-decoration: none;
+        text-decoration: none !important;
+        transition: color 0.3s ease;
     }
 
     .informasi-link:hover {
-        color: #f15a25;
-        transition: color 0.3s ease;
+        color: #f15a25 !important;
+    }
+
+    .informasi-link:active {
+        color: #f15a25 !important;
     }
 </style>
 
