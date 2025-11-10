@@ -25,7 +25,7 @@ class KategoriInformasiUmumSeeder extends Seeder
             KategoriInformasiUmum::create(['kategori' => $kategori]);
         }
 
-        KategoriInformasiUmum::factory(100)->create();
+        // KategoriInformasiUmum::factory(100)->create();
     }
 }
 

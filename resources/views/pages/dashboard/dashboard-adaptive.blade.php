@@ -58,7 +58,8 @@
                     <input type="text" class="form-control me-1" name="search" placeholder="Search"
                         value="{{ request('search') }}"
                     >
-                    <button class="btn theme-button">Search</button>
+                    <button class="btn theme-button me-1">Search</button>
+                    <button type="button" class="btn theme-button" data-bs-toggle="modal" data-bs-target="#createModal">Create</button>
                 </form>
                 
                 <div class="overflow-x-auto">
@@ -133,31 +134,134 @@
     </div>
 
     {{-- Update Modal --}}
-    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Update {{ $modelName }}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body row">
-            @foreach($columnNames as $columnName)
-                @if($columnName === 'password')
-                    @continue
-                @endif
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-hidden="true">
+        <form class="modal-dialog">
+            @csrf
 
-                @php
-                    $displayName = $columnName === 'id' ? 'No.' : ucwords(str_replace('_', ' ', $columnName));
-                @endphp
-                <th scope="col">{{ $displayName }}</th>
-            @endforeach
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-            <button type="button" class="btn theme-button">Simpan</button>
-        </div>
-        </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update {{ $modelName }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3">
+                    @foreach($columns as $columnName => $col)
+                        {{-- <th scope="col">{{ ucwords(str_replace('_', ' ', $columnName)) }}</th> --}}
+                        <div class="col-12 col-md-6">
+                            <label for="update-{{ $columnName }}" class="form-label">{{ $col['alias'] }}</label>
+                            
+                            @if(in_array($columnName, $foreignColumns))
+                                <select 
+                                    class="form-select"
+                                    name="{{ $columnName }}"
+                                    id="update-{{ $columnName }}" 
+                                >
+                                    @foreach($foreignTableData[$col['foreignTableName']] as $row)
+                                        <option 
+                                            value="{{ $row->id }}"
+                                        >
+                                            {{ $row->getAttribute($columnName) }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            @else
+                                <input 
+                                    type="{{ $col['inputType'] }}"
+                                    class="form-control" 
+                                    name="{{ $columnName }}" 
+                                    id="update-{{ $columnName }}" 
+                                    placeholder="{{ $col['alias'] }}"
+                                    value="{{ old($columnName) }}"
+                                    {{ $col['inputType'] === 'file' ? '' : 'required' }}
+                                    {{ $col['inputType'] === 'file' ? '' : 'accept="image/*"' }}
+                                >
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn theme-button">Simpan</button>
+                </div>
+            </div>
+        </form>
     </div>
+
+    <div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+        <form class="modal-dialog">
+            @csrf
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create {{ $modelName }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row g-3">
+                    @foreach($columns as $columnName => $col)
+                        @if ($columnName === 'id')    
+                            @continue
+                        @endif
+
+                        <div class="col-12 col-md-6">
+                            <label for="update-{{ $columnName }}" class="form-label">{{ $col['alias'] }}</label>
+                            
+                            @if(in_array($columnName, $foreignColumns))
+                                <select 
+                                    class="form-select"
+                                    name="{{ $columnName }}"
+                                    id="update-{{ $columnName }}" 
+                                >
+                                    @foreach($foreignTableData[$col['foreignTableName']] as $row)
+                                        <option 
+                                            value="{{ $row->id }}"
+                                        >
+                                            {{ $row->getAttribute($columnName) }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            @else
+                                <input 
+                                    type="{{ $col['inputType'] }}"
+                                    class="form-control" 
+                                    name="{{ $columnName }}" 
+                                    id="update-{{ $columnName }}" 
+                                    placeholder="{{ $col['alias'] }}"
+                                    {{ $col['inputType'] === 'file' ? '' : 'required' }}
+                                >
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn theme-button">Simpan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {{-- Delete Modal --}}
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <form class="modal-dialog">
+            @csrf
+
+            <input type="hidden" name="id" />
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete {{ $modelName }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Apa Anda yakin ingin menghapus baris ini?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn theme-button">Hapus</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 <script src="{{ asset('js/bootstrap.js') }}"></script>

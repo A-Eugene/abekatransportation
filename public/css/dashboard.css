@@ -47,6 +47,10 @@ body {
     border: 1px solid #ced4da !important;
 }
 
+.table tr {
+    max-height: 200px;
+}
+
 .table img {
     max-width: 150px;
     max-height: 150px;
