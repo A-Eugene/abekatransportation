@@ -71,11 +71,11 @@ class InformasiUmumSeeder extends Seeder
             }
         }
 
-        KategoriInformasiUmum::all()->each(function($kategori) {
-            InformasiUmum::factory(rand(5,10))->create([
-                'kategori_id' => $kategori->id
-            ]);
-        });
+        // KategoriInformasiUmum::all()->each(function($kategori) {
+        //     InformasiUmum::factory(rand(5,10))->create([
+        //         'kategori_id' => $kategori->id
+        //     ]);
+        // });
     }
 }
 
