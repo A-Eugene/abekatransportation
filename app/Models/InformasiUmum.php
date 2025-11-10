@@ -18,4 +18,17 @@ class InformasiUmum extends Model
     }
 
     public $timestamps = false;
+
+    public static function dashboardRelationDisplay(): array
+    {
+        return [
+            'kategori_id' => [
+                'relation' => 'kategori',
+                'foreign_model' => 'Kategori Informasi Umum',
+                'foreign_columns' => [
+                    'kategori' => 'Kategori'
+                ]
+            ]
+        ];
+    }
 }

@@ -28,5 +28,8 @@ Route::middleware('auth')->group(function () {
         return redirect(route('dashboard', ['model' => 'User']));
     });
     Route::get('/dashboard/{model}', [DashboardController::class, 'dashboardPage'])->name('dashboard');
+    // Route::patch('/dashboard/{model}', [DashboardController::class, 'dashboardPage'])->name('dashboard-update');
+    // Route::post('/dashboard/{model}', [DashboardController::class, 'dashboardPage'])->name('dashboard-create');
+    // Route::delete('/dashboard/{model}', [DashboardController::class, 'dashboardPage'])->name('dashboard-delete');
 });
 

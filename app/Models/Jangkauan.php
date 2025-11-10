@@ -18,6 +18,6 @@ class Jangkauan extends Model
         'telepon',
         'image',
     ];
-
+    
     public $timestamps = false;
 }

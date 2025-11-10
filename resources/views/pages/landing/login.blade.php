@@ -21,7 +21,7 @@
                     <input type="text" class="form-control" name="username" placeholder="Masukkan username Anda"
                         value="{{ old('username') }}"
                         pattern="[A-Za-z0-9_]{3,20}"
-                        title="Only letters, numbers, and underscores (3-20 chars)">
+                        title="Only letters, numbers, and underscores (3-20 chars)" required>
                 </div>
 
                 <div class="mb-3">

@@ -17,6 +17,6 @@ class KategoriInformasiUmum extends Model
     {
         return $this->hasMany(InformasiUmum::class, 'kategori_id');
     }
-
+    
     public $timestamps = false;
 }
