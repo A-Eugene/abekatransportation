@@ -9,15 +9,10 @@
             heading_1="Tarif"
             heading_2="Layanan"
         >
-<<<<<<< HEAD:resources/views/pages/landing/tarif.blade.php
-            <p class="lead text-muted">Kami menghadirkan harga yang kompetitif dan adil untuk setiap kilometer perjalanan barang Anda.</p>
-        </x-section-heading-and-container>
-=======
             <p class="lead text-muted">
                 Kami menghadirkan harga yang kompetitif dan adil untuk setiap kilometer perjalanan barang Anda.
             </p>
         </x-landing.section-heading-and-container>
->>>>>>> tarifNew:resources/views/pages/tarif.blade.php
     </div>
 
     <div class="container">
