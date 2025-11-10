@@ -196,6 +196,7 @@
                                     placeholder="{{ $col['alias'] }}"
                                     value="{{ old($columnName) }}"
                                     {{ $col['inputType'] === 'file' ? '' : 'required' }}
+                                    {{ $col['inputType'] === 'file' ? '' : 'accept="image/*"' }}
                                 >
                             @endif
                         </div>
